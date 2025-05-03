@@ -97,7 +97,7 @@ export default function CategorySidebar({ onSelectCategory }: Props) {
         p={1.5}
         borderBottom="1px solid #f0f0f0"
       >
-        <Typography fontWeight="500" fontSize="14px">دسته بندی</Typography>
+        <Typography fontFamily={"inherit"} fontWeight="500" fontSize="14px">دسته بندی</Typography>
         {path.length > 0 && (
           <IconButton size="small" onClick={goBack} sx={{ p: 0.5 }}>
             <ArrowBackIosNewIcon fontSize="small" />
@@ -120,7 +120,8 @@ export default function CategorySidebar({ onSelectCategory }: Props) {
               primaryTypographyProps={{ 
                 color: "primary", 
                 fontSize: "14px",
-                fontWeight: "500"
+                fontWeight: "500",
+                fontFamily:"inherit"
               }} 
             />
             <ChevronLeftIcon fontSize="small" color="primary" />
@@ -152,9 +153,11 @@ export default function CategorySidebar({ onSelectCategory }: Props) {
                 )}
                 <ListItemText 
                   primary={item.name} 
+                  
                   primaryTypographyProps={{ 
                     fontSize: "14px",
-                    fontWeight: active ? "500" : "normal"
+                    fontWeight: active ? "500" : "normal",
+                    fontFamily:"inherit"
                   }}
                 />
                 {hasChildren && (
